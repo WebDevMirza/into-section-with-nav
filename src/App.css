@@ -26,6 +26,7 @@ body {
   font-size: var(--fs-fontsize);
   font-weight: var(--fw-500);
   background-color: var(--AlmostWhite);
+  color: var(--MediumGray);
 }
 
 /* ==============================

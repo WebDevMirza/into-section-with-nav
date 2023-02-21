@@ -25,60 +25,48 @@ const Header = () => {
 
           <nav className="nav-desktop">
             <ul>
-              <ul className="features">
-                <p
-                  onMouseEnter={(e) => {
-                    menuVisible(e);
-                  }}
-                >
-                  Features
-                </p>
-                <ul
-                  className="sm sm-1"
-                  onMouseLeave={(e) => {
-                    menuHidden(e);
-                  }}
-                >
-                  <li>
-                    <a href="#">Todo List</a>
-                  </li>
-                  <li>
-                    <a href="#">Calendar</a>
-                  </li>
-                  <li>
-                    <a href="#">Reminders</a>
-                  </li>
-                  <li>
-                    <a href="#">Planning</a>
-                  </li>
+              <div className="drop-down">
+                <ul className="features">
+                  <p>Features</p>
+                  <div className="sm sm-1 visiblity">
+                    <div></div>
+                    <ul className="bg">
+                      <li>
+                        <a href="#">Todo List</a>
+                      </li>
+                      <li>
+                        <a href="#">Calendar</a>
+                      </li>
+                      <li>
+                        <a href="#">Reminders</a>
+                      </li>
+                      <li>
+                        <a href="#">Planning</a>
+                      </li>
+                    </ul>
+                  </div>
                 </ul>
-              </ul>
+              </div>
 
-              <ul className="company">
-                <p
-                  onMouseEnter={(e) => {
-                    menuVisible(e);
-                  }}
-                >
-                  Company
-                </p>
-                <ul
-                  className="sm sm-2"
-                  onMouseLeave={(e) => {
-                    menuHidden(e);
-                  }}
-                >
-                  <li>
-                    <a href="#">History</a>
-                  </li>
-                  <li>
-                    <a href="#">Our Team</a>
-                  </li>
-                  <li>
-                    <a href="#">Blog</a>
-                  </li>
+              <div className="drop-down">
+                <ul className="company">
+                  <p>Company</p>
+                  <div className="sm sm-2 visiblity">
+                    <div></div>
+                    <ul className="bg">
+                      <li>
+                        <a href="#">History</a>
+                      </li>
+                      <li>
+                        <a href="#">Our Team</a>
+                      </li>
+                      <li>
+                        <a href="#">Blog</a>
+                      </li>
+                    </ul>
+                  </div>
                 </ul>
-              </ul>
+              </div>
 
               <li>
                 <a href="#">Careers</a>

@@ -10,26 +10,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   gap: 2rem;
 }
 
 .features,
 .company {
   position: relative;
-  background-color: red;
 }
 
 .sm {
   position: absolute;
-  visibility: hidden;
-  background-color: chartreuse;
-  top: 30px;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  display: none;
+  padding-top: 1rem;
 }
 
-.visiblity {
-  visibility: visible;
+.bg {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.bg > * + * {
+  margin-top: 1rem;
+  width: 9ch;
+  margin-inline: auto;
 }
 
 .sm-1 {
@@ -42,4 +48,17 @@
 
 nav p {
   cursor: pointer;
+}
+
+.drop-down:hover .visiblity {
+  display: block;
+}
+
+nav a {
+  color: inherit;
+}
+
+nav a:hover,
+nav p:hover {
+  color: var(--AlmostBlack);
 }
