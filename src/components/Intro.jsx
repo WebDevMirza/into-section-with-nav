@@ -14,7 +14,7 @@ const Intro = () => {
         <div className="intro">
           <div className="intro-img">
             <picture>
-              <source media="(min-width: 1024px)" srcset={IntroImgDesktop} />
+              <source media="(min-width: 1024px)" srcSet={IntroImgDesktop} />
               <img src={IntroImgMobile} alt="Guy with his laptop observing the beauty of React js" />
             </picture>
           </div>

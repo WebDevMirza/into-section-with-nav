@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Logo from "../assets/images/logo.svg";
 import "../assets/styles/header.css";
 
 const Header = () => {
+  const navMobile = useRef("");
+  const navToggle = useRef("");
+  const toggleMenu = () => {
+    [...navMobile.current.classList].includes("nav-mobile")
+      ? navMobile.current.classList.remove("nav-mobile")
+      : navMobile.current.classList.add("nav-mobile");
+
+    [...navToggle.current.classList].includes("menu-toggle-cross")
+      ? navToggle.current.classList.remove("menu-toggle-cross")
+      : navToggle.current.classList.add("menu-toggle-cross");
+  };
+
   return (
     <>
       <div className="layout">
@@ -13,9 +25,9 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="menu-toggle"></div>
+          <div ref={navToggle} onClick={toggleMenu} className="menu-toggle"></div>
 
-          <nav className="nav-desktop">
+          <nav ref={navMobile} className="nav-desktop">
             <ul>
               <div className="drop-down">
                 <ul className="features">
