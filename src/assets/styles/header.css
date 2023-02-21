@@ -1,0 +1,45 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav-desktop,
+.nav-desktop > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.features,
+.company {
+  position: relative;
+  background-color: red;
+}
+
+.sm {
+  position: absolute;
+  visibility: hidden;
+  background-color: chartreuse;
+  top: 30px;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.visiblity {
+  visibility: visible;
+}
+
+.sm-1 {
+  right: 0;
+}
+
+.sm-2 {
+  left: 0;
+}
+
+nav p {
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+:root {
+  /*  ===============================
+      Colors
+      ===============================   */
+
+  --AlmostWhite: hsl(0, 0%, 98%);
+  --MediumGray: hsl(0, 0%, 41%);
+  --AlmostBlack: hsl(0, 0%, 8%);
+
+  /* ===============================
+     Fonts
+     ===============================  */
+
+  --ff-primary: "Epilogue", sans-serif;
+  --fs-fontsize: 1rem;
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+/* ==============================
+   Body
+   ==============================  */
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-fontsize);
+  font-weight: var(--fw-500);
+  background-color: var(--AlmostWhite);
+}
+
+/* ==============================
+Layout
+============================== */
+
+.layout {
+  max-width: 375px;
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    max-width: 1440px;
+    width: 90%;
+  }
+}
