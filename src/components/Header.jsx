@@ -5,6 +5,7 @@ import "../assets/styles/header.css";
 const Header = () => {
   const navMobile = useRef("");
   const navToggle = useRef("");
+
   const toggleMenu = () => {
     [...navMobile.current.classList].includes("nav-mobile")
       ? navMobile.current.classList.remove("nav-mobile")
@@ -19,6 +20,18 @@ const Header = () => {
     bgCheck
       ? [...document.getElementsByTagName("body")][0].classList.remove("bg-dark")
       : [...document.getElementsByTagName("body")][0].classList.add("bg-dark");
+  };
+
+  const mobileExpand = (e) => {
+    const targetElement = [...e.target.nextSibling.classList];
+    const visiblityCheck = targetElement.includes("mobile-visiblity");
+    const targetParent = e.target.parentElement;
+
+    visiblityCheck
+      ? e.target.nextSibling.classList.remove("mobile-visiblity")
+      : e.target.nextSibling.classList.add("mobile-visiblity");
+
+    visiblityCheck ? targetParent.classList.add("mobile-tap") : targetParent.classList.remove("mobile-tap");
   };
 
   return (
@@ -37,8 +50,8 @@ const Header = () => {
             <ul>
               <div className="drop-down">
                 <ul className="features">
-                  <p>Features</p>
-                  <div className="sm sm-1 visiblity">
+                  <p onClick={mobileExpand}>Features</p>
+                  <div className="sm sm-1 visiblity mobile-visiblity">
                     <div></div>
                     <ul className="bg">
                       <li>
@@ -68,8 +81,8 @@ const Header = () => {
 
               <div className="drop-down">
                 <ul className="company">
-                  <p>Company</p>
-                  <div className="sm sm-2 visiblity">
+                  <p onClick={mobileExpand}>Company</p>
+                  <div className="sm sm-2 visiblity mobile-visiblity">
                     <div></div>
                     <ul className="bg bg-company">
                       <li>

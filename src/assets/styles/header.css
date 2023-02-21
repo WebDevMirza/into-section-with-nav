@@ -65,13 +65,17 @@
   cursor: pointer;
 }
 
+.mobile-tap::after {
+  background-image: url(../images/icon-arrow-up.svg);
+}
+
 .userAction {
   text-align: center;
 }
 
 nav a {
   color: inherit;
-  display: block;
+  display: inline-block;
 }
 
 nav a:hover,
@@ -149,9 +153,21 @@ li {
   margin-top: 1rem;
 }
 
+.mobile-visiblity {
+  display: none;
+}
+
 @media (min-width: 1024px) {
-  ul,
-  li {
+  .features,
+  .company,
+  nav > ul > li,
+  li,
+  ul {
+    margin-top: 0;
+  }
+
+  .userAction,
+  .userAction li {
     margin-top: 0;
   }
 
@@ -242,6 +258,10 @@ li {
 
   nav p {
     cursor: pointer;
+  }
+
+  nav a {
+    display: inline;
   }
 
   .drop-down:hover .visiblity {
