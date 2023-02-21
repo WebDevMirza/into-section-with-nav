@@ -14,13 +14,12 @@
 
 .nav-mobile {
   position: absolute;
-  /* background-color: var(--AlmostWhite); */
-  background-color: aquamarine;
+  background-color: var(--AlmostWhite);
   width: 80%;
   min-height: 100vh;
   top: -1.5rem;
   right: -1.5rem;
-  padding: 1rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
 .nav-mobile {
@@ -60,7 +59,7 @@
   width: 10px;
   height: 10px;
   top: 5px;
-  right: 0;
+  left: 85px;
   background-image: url(../images/icon-arrow-down.svg);
   background-repeat: no-repeat;
   cursor: pointer;
@@ -123,7 +122,39 @@ nav p:hover {
   background-image: url(../images/icon-planning.svg);
 }
 
+/* Only mobile */
+.bg {
+  margin-left: 3rem;
+}
+
+.bg-company {
+  margin-left: 1.5rem;
+}
+
+.features,
+.company,
+nav > ul > li {
+  margin-top: 1.5rem;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+.userAction {
+  margin-top: 3rem;
+}
+
+.userAction li {
+  margin-top: 1rem;
+}
+
 @media (min-width: 1024px) {
+  ul,
+  li {
+    margin-top: 0;
+  }
+
   .header {
     grid-template-columns: auto 1fr;
     margin-top: 3rem;
@@ -176,6 +207,11 @@ nav p:hover {
     position: absolute;
     display: none;
     padding-top: 1rem;
+  }
+
+  .bg,
+  .bg-company {
+    margin-left: 0;
   }
 
   .bg {

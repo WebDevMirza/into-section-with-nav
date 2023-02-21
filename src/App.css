@@ -29,6 +29,10 @@ body {
   color: var(--MediumGray);
 }
 
+.bg-dark {
+  background-color: var(--MediumGray);
+}
+
 /* ==============================
 Layout
 ============================== */

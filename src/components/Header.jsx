@@ -13,6 +13,12 @@ const Header = () => {
     [...navToggle.current.classList].includes("menu-toggle-cross")
       ? navToggle.current.classList.remove("menu-toggle-cross")
       : navToggle.current.classList.add("menu-toggle-cross");
+
+    // bgChange
+    const bgCheck = [...document.getElementsByTagName("body")][0].classList.contains("bg-dark");
+    bgCheck
+      ? [...document.getElementsByTagName("body")][0].classList.remove("bg-dark")
+      : [...document.getElementsByTagName("body")][0].classList.add("bg-dark");
   };
 
   return (
