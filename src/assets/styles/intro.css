@@ -1,0 +1,101 @@
+.intro {
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+  gap: 2rem;
+
+  text-align: center;
+
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  letter-spacing: 0.05em;
+}
+
+.intro-title {
+  color: var(--AlmostBlack);
+  font-weight: 700;
+}
+
+.intro-text {
+  max-width: 40ch;
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-block: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--AlmostBlack);
+  color: var(--AlmostWhite);
+  border: 1px solid var(--AlmostBlack);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  filter: invert(1);
+  border: 1px solid var(--AlmostWhite);
+}
+
+.intro-img {
+  max-width: 375px;
+  margin-inline: auto;
+}
+
+.intro-company {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 375px;
+  margin-inline: auto;
+  padding-inline: 10px;
+  margin-top: 2rem;
+}
+
+.intro-company img {
+  max-width: 70px;
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    grid-auto-flow: column;
+    align-items: end;
+    justify-content: space-evenly;
+    text-align: left;
+    gap: 4rem;
+  }
+
+  .intro-body {
+    order: 1;
+  }
+
+  .intro-img {
+    order: 2;
+  }
+
+  .intro-title {
+    font-size: 3rem;
+    line-height: 0.9;
+    letter-spacing: 0.06em;
+  }
+
+  .lead {
+    display: block;
+  }
+
+  .intro-company,
+  .intro-text {
+    margin-inline: 0;
+  }
+
+  .intro-text {
+    max-width: 45ch;
+    line-height: 1.4;
+  }
+
+  .intro-company {
+    max-width: 420px;
+    margin-top: 3rem;
+  }
+}

@@ -35,13 +35,21 @@ Layout
 
 .layout {
   max-width: 375px;
-  width: 90%;
+  width: var(--extraWidth, 90%);
   margin-inline: auto;
 }
 
+.layout-main {
+  --extraWidth: 100%;
+}
+
 @media (min-width: 1024px) {
+  .layout-main {
+    --extraWidth: 80%;
+  }
+
   .layout {
     max-width: 1440px;
-    width: 90%;
+    width: var(--extraWidth, 90%);
   }
 }

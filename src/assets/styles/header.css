@@ -4,7 +4,7 @@
   align-items: center;
   gap: 4rem;
 
-  margin-top: 4rem;
+  margin-top: 1.5rem;
 }
 
 .nav-desktop {
@@ -21,6 +21,7 @@
 @media (min-width: 1024px) {
   .header {
     grid-template-columns: auto 1fr;
+    margin-top: 3rem;
   }
 
   .menu-toggle {
@@ -52,6 +53,7 @@
     right: 0;
     background-image: url(../images/icon-arrow-down.svg);
     background-repeat: no-repeat;
+    cursor: pointer;
   }
 
   .features:hover p,

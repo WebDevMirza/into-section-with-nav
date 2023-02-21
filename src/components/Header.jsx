@@ -8,7 +8,7 @@ const Header = () => {
       <div className="layout">
         <div className="header">
           <div className="logo">
-            <a href="#" aria-label="snap logo">
+            <a href="/" aria-label="snap logo">
               <img src={Logo} alt="" />
             </a>
           </div>
