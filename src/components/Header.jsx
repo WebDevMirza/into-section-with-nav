@@ -89,7 +89,7 @@ const Header = () => {
               </li>
             </ul>
 
-            <ul>
+            <ul className="userAction">
               <li>
                 <a href="#">Login</a>
               </li>

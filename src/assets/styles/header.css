@@ -16,7 +16,7 @@
   position: absolute;
   /* background-color: var(--AlmostWhite); */
   background-color: aquamarine;
-  width: 60%;
+  width: 80%;
   min-height: 100vh;
   top: -1.5rem;
   right: -1.5rem;
@@ -64,6 +64,63 @@
   background-image: url(../images/icon-arrow-down.svg);
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.userAction {
+  text-align: center;
+}
+
+nav a {
+  color: inherit;
+  display: block;
+}
+
+nav a:hover,
+nav p:hover {
+  color: var(--AlmostBlack);
+}
+
+.reg {
+  border: 2px solid var(--MediumGray);
+  padding: 0.5rem 1.325rem;
+  border-radius: 1rem;
+}
+
+.reg:hover {
+  border-color: var(--AlmostBlack);
+}
+
+/* icons */
+.icon {
+  position: relative;
+}
+
+.icon::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/icon-todo.svg);
+  background-repeat: no-repeat;
+  left: -28px;
+  top: -2px;
+  width: 20px;
+  height: 20px;
+}
+
+.todo::after {
+  background-image: url(../images/icon-todo.svg);
+  top: -2px;
+}
+
+.cal::after {
+  background-image: url(../images/icon-calendar.svg);
+}
+
+.reminder::after {
+  background-image: url(../images/icon-reminders.svg);
+}
+
+.plan::after {
+  background-image: url(../images/icon-planning.svg);
 }
 
 @media (min-width: 1024px) {
@@ -153,15 +210,6 @@
 
   .drop-down:hover .visiblity {
     display: block;
-  }
-
-  nav a {
-    color: inherit;
-  }
-
-  nav a:hover,
-  nav p:hover {
-    color: var(--AlmostBlack);
   }
 
   .reg {
