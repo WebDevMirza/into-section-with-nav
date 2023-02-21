@@ -1,64 +1,158 @@
 .header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 4rem;
+
+  margin-top: 4rem;
 }
 
-.nav-desktop,
-.nav-desktop > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 2rem;
-}
-
-.features,
-.company {
-  position: relative;
-}
-
-.sm {
-  position: absolute;
+.nav-desktop {
   display: none;
-  padding-top: 1rem;
 }
 
-.bg {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.menu-toggle {
+  background-image: url(../images/icon-menu.svg);
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 35px;
 }
 
-.bg > * + * {
-  margin-top: 1rem;
-  width: 9ch;
-  margin-inline: auto;
-}
+@media (min-width: 1024px) {
+  .header {
+    grid-template-columns: auto 1fr;
+  }
 
-.sm-1 {
-  right: 0;
-}
+  .menu-toggle {
+    display: none;
+  }
 
-.sm-2 {
-  left: 0;
-}
+  .nav-desktop,
+  .nav-desktop > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-nav p {
-  cursor: pointer;
-}
+    gap: 2rem;
+  }
 
-.drop-down:hover .visiblity {
-  display: block;
-}
+  .features,
+  .company {
+    position: relative;
+    padding-right: 15px;
+  }
 
-nav a {
-  color: inherit;
-}
+  .features::after,
+  .company::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    right: 0;
+    background-image: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+  }
 
-nav a:hover,
-nav p:hover {
-  color: var(--AlmostBlack);
+  .features:hover p,
+  .company:hover p {
+    color: var(--AlmostBlack) !important;
+  }
+
+  .features:hover::after,
+  .company:hover::after {
+    background-image: url(../images/icon-arrow-up.svg);
+  }
+
+  .sm {
+    position: absolute;
+    display: none;
+    padding-top: 1rem;
+  }
+
+  .bg {
+    background-color: white;
+    padding: 1rem 2rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .bg-company {
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  .bg > * {
+    margin-top: 1rem;
+    width: 11ch;
+    padding-left: 1rem;
+    margin-inline: auto;
+  }
+
+  .sm-1 {
+    right: 0;
+  }
+
+  .sm-2 {
+    left: 0;
+  }
+
+  nav p {
+    cursor: pointer;
+  }
+
+  .drop-down:hover .visiblity {
+    display: block;
+  }
+
+  nav a {
+    color: inherit;
+  }
+
+  nav a:hover,
+  nav p:hover {
+    color: var(--AlmostBlack);
+  }
+
+  .reg {
+    border: 2px solid var(--MediumGray);
+    padding: 0.5rem 1.325rem;
+    border-radius: 1rem;
+  }
+
+  .reg:hover {
+    border-color: var(--AlmostBlack);
+  }
+
+  /* icons */
+  .icon {
+    position: relative;
+  }
+
+  .icon::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/icon-todo.svg);
+    background-repeat: no-repeat;
+    left: -28px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .todo::after {
+    background-image: url(../images/icon-todo.svg);
+    top: -2px;
+  }
+
+  .cal::after {
+    background-image: url(../images/icon-calendar.svg);
+  }
+
+  .reminder::after {
+    background-image: url(../images/icon-reminders.svg);
+  }
+
+  .plan::after {
+    background-image: url(../images/icon-planning.svg);
+  }
 }

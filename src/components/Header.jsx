@@ -3,16 +3,6 @@ import Logo from "../assets/images/logo.svg";
 import "../assets/styles/header.css";
 
 const Header = () => {
-  const [visiblity, setVisiblity] = useState("");
-
-  const menuVisible = (e) => {
-    e.target.nextSibling.classList.add("visiblity");
-  };
-
-  const menuHidden = (e) => {
-    e.target.classList.remove("visiblity");
-  };
-
   return (
     <>
       <div className="layout">
@@ -23,6 +13,8 @@ const Header = () => {
             </a>
           </div>
 
+          <div className="menu-toggle"></div>
+
           <nav className="nav-desktop">
             <ul>
               <div className="drop-down">
@@ -32,16 +24,24 @@ const Header = () => {
                     <div></div>
                     <ul className="bg">
                       <li>
-                        <a href="#">Todo List</a>
+                        <a className="icon todo" href="#">
+                          Todo List
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Calendar</a>
+                        <a className="icon cal" href="#">
+                          Calendar
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Reminders</a>
+                        <a className="icon reminder" href="#">
+                          Reminders
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Planning</a>
+                        <a className="icon plan" href="#">
+                          Planning
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -53,7 +53,7 @@ const Header = () => {
                   <p>Company</p>
                   <div className="sm sm-2 visiblity">
                     <div></div>
-                    <ul className="bg">
+                    <ul className="bg bg-company">
                       <li>
                         <a href="#">History</a>
                       </li>
@@ -82,7 +82,9 @@ const Header = () => {
                 <a href="#">Login</a>
               </li>
               <li>
-                <a href="#">Register</a>
+                <a className="reg" href="#">
+                  Register
+                </a>
               </li>
             </ul>
           </nav>

@@ -35,6 +35,7 @@ Layout
 
 .layout {
   max-width: 375px;
+  width: 90%;
   margin-inline: auto;
 }
 
