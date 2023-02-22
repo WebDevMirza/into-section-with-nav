@@ -32,6 +32,8 @@ body {
 .bg-dark {
   background-color: rgba(54, 53, 53, 0.563);
   filter: contrast(200%);
+  height: 100%;
+  overflow: hidden;
 }
 
 /* ==============================
